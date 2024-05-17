@@ -6,10 +6,16 @@
   .bg-dark {
     background-color: #333;
   }
+  .text-dark {
+    color: #333;
+  }
   .bg-pros {
     @apply bg-cover bg-center bg-no-repeat;
   }
   .bg-brown {
     background-color: #a18a4d;
+  }
+  .text-brown {
+    color: #a18a4d;
   }
 }
