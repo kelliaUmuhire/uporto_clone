@@ -124,6 +124,47 @@
             valued by the labour market.
           </p>
         </div>
+        <h1 class="font-bold text-[1.75rem] text-dark mt-14">
+          Which course are you looking for?
+        </h1>
+        <div class="flex w-full gap-8">
+          <form class="mt-4 w-[70%]">
+            <select
+              name="course-type"
+              class="border-2 border-black w-full p-3 pl-5 appearance-none bg-no-repeat text-lg focus:outline-none"
+              style="
+                background-image: url('/images/down_arrow.svg');
+                background-size: 10px 10px;
+                background-position: calc(100% - 20px);
+              "
+            >
+              <option value="All">All</option>
+              <option value="BM">
+                Bachelor's and Integrated Master's Degrees
+              </option>
+              <option value="M">Master's Degrees</option>
+              <option value="D">Doctorates</option>
+            </select>
+            <input
+              type="text"
+              class="border-2 border-black w-full py-3 px-5 my-4 text-lg focus:outline-none"
+              placeholder="Please enter course keywords"
+            />
+            <button class="bg-brown text-white text-2xl w-full py-3 font-bold">
+              Search
+            </button>
+          </form>
+          <div class="mt-3 w-[30%]">
+            <div class="text-2xl mb-2">Courses from A to Z:</div>
+            <div class="flex flex-col text-[1.36rem] font-light underline">
+              <a href="" class="hover:text-brown"
+                >Bachelor's and Integrated Master's Degrees</a
+              >
+              <a href="" class="hover:text-brown">Master's Degrees</a>
+              <a href="" class="hover:text-brown">Doctorates</a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
