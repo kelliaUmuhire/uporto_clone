@@ -1,4 +1,4 @@
-let nav = document.querySelector("nav");
+let nav = document.getElementById("navbar");
 let sticky = nav.offsetTop;
 
 const toggleMenu = (menu) => {
