@@ -7,6 +7,12 @@ export default {
         mdark: "#333",
         brown: "#a18a4d",
       },
+      spacing: {
+        32: "7.5rem",
+      },
+      fontSize: {
+        sm: "0.9rem",
+      },
     },
   },
   plugins: [],

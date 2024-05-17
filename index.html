@@ -17,10 +17,13 @@
         font-family: "Lato", sans-serif;
       }
     </style>
+    <script src="./main.js" defer></script>
   </head>
   <body class="overflow-x-hidden">
     <header>
-      <div class="flex bg-mdark justify-between text-white w-full px-32">
+      <div
+        class="flex md:flex-row flex-col md:py-0 py-4 bg-mdark justify-between text-white w-full 2xl:px-52 md:px-32 px-10"
+      >
         <div class="flex items-center gap-4">
           <div class="flex w-fit items-center">
             <a href="" class="w-fit text-xs font-semibold"
@@ -41,7 +44,7 @@
             />
           </div>
         </div>
-        <div class="flex items-center gap-10">
+        <div class="flex items-center gap-10 md:justify-normal justify-between">
           <div class="flex gap-5 items-center">
             <a href="">
               <img src="/images/newspaper.svg" class="w-4" />
@@ -62,24 +65,28 @@
               <img src="/images/facebook.svg" class="w-2.5" />
             </a>
           </div>
-          <ul class="text-[0.9rem] font-semibold">
+          <ul class="text-sm font-semibold">
             <li class="text-gray-500 inline">PT</li>
             <li class="inline ml-2">EN</li>
           </ul>
         </div>
       </div>
       <nav
-        class="bg-stone-200 px-32 py-8 flex gap-6 justify-between items-center w-full text-[1.1rem] font-extrabold"
+        class="bg-stone-200 2xl:px-52 md:px-32 px-10 py-8 flex lg:flex-nowrap flex-wrap lg:gap-6 justify-between items-center w-full text-[1.1rem] font-extrabold"
       >
-        <img src="/images/logo1.svg" class="w-[35%]" />
-        <div class="flex w-[65%] justify-between pl-4">
+        <img src="/images/logo1.svg" class="lg:w-[35%] w-[75%]" />
+        <div class="lg:hidden" onclick="toggleMenu()">Menu</div>
+        <div
+          id="menuLinks"
+          class="lg:flex hidden lg:flex-row flex-col lg:w-auto w-full lg:pl-4 lg:mt-0 mt-6 lg:gap-8 gap-2"
+        >
           <a href="">STUDY</a>
           <a href="">RESEARCH</a>
           <a href="">INNOVATE</a>
           <a href="">LIVE</a>
           <a href="">EXPLORE</a>
-          <a class="border-b border-b-black flex items-center">
-            <span class="pr-8 text-base font-normal">Search</span>
+          <a class="border-b border-b-black flex items-center w-fit">
+            <span class="pr-10 text-base font-normal">Search</span>
             <img src="/images/search.svg" class="w-5"
           /></a>
         </div>
@@ -87,12 +94,14 @@
     </header>
     <main>
       <section
-        class="bg-pros min-h-[100vh] w-full relative flex flex-col justify-end px-32 pb-20"
+        class="bg-pros h-[600px] w-full relative flex flex-col justify-end 2xl:px-52 md:px-32 px-10"
         style="
           background-image: url('https://www.up.pt/portal/media/images/ijup-2024_12.format-jpeg.jpg');
         "
       >
-        <div class="bg-zinc-800 bg-opacity-80 p-5 pr-8 w-[48%]">
+        <div
+          class="bg-zinc-800 bg-opacity-80 p-5 pr-8 md:w-[38%] w-full absolute md:top-1/2 md:bottom-auto bottom-0 2xl:left-52 md:left-32 left-0"
+        >
           <h1 class="text-gray-200 text-2xl font-bold">
             We're in the world's top 200 in 13 areas of study!
           </h1>
@@ -111,15 +120,15 @@
           <img src="/images/left.svg" class="w-5" />
         </div>
       </section>
-      <section class="px-32 pt-24 pb-28">
+      <section class="2xl:px-52 md:px-32 px-6 md:pt-24 pt-16 md:pb-28 pb-14">
         <h1 class="text-brown text-[3.2rem] font-light">Study</h1>
         <div
-          class="flex justify-between mt-4 border-b-2 border-b-gray-200 pb-14"
+          class="md:flex justify-between mt-4 border-b-2 border-b-gray-200 pb-14"
         >
           <h1 class="font-bold text-[1.75rem] text-mdark">
             Your future is here!
           </h1>
-          <p class="font-light w-[65%] text-[1.2rem]">
+          <p class="font-light md:w-[65%] w-full text-[1.2rem] md:mt-0 mt-4">
             Gathering the most complete offer of training programmes in
             Portugal, the 14 faculties of the U.Porto offer unique conditions to
             those who want to build an academic path of excellence and properly
@@ -129,8 +138,8 @@
         <h1 class="font-bold text-[1.75rem] text-mdark mt-14">
           Which course are you looking for?
         </h1>
-        <div class="flex w-full gap-8">
-          <form class="mt-4 w-[70%]">
+        <div class="md:flex w-full gap-8">
+          <form class="mt-4 md:w-[70%] w-full">
             <select
               name="course-type"
               class="border-2 border-black w-full p-3 pl-5 appearance-none bg-no-repeat text-lg focus:outline-none"
@@ -156,7 +165,7 @@
               Search
             </button>
           </form>
-          <div class="mt-3 w-[30%]">
+          <div class="md:mt-3 mt-10 md:w-[30%] w-full">
             <div class="text-2xl mb-2">Courses from A to Z:</div>
             <div class="flex flex-col text-[1.36rem] font-light underline">
               <a href="" class="hover:text-brown"
@@ -168,7 +177,7 @@
           </div>
         </div>
       </section>
-      <section class="bg-stone-100 px-32 py-24">
+      <section class="bg-stone-100 2xl:px-52 md:px-32 px-6 md:py-24 py-14">
         <div class="flex justify-between">
           <h1 class="text-brown text-[3.2rem] font-light">News</h1>
           <a href="" class="flex items-center">
@@ -178,7 +187,7 @@
         </div>
         <div class="flex gap-9 w-full overflow-hidden mt-8">
           <div
-            class="bg-white flex flex-col justify-between w-[38%] flex-shrink-0"
+            class="bg-white flex flex-col justify-between md:w-[38%] lg:w-[50%] w-[100%] flex-shrink-0"
           >
             <div class="p-6">
               <div class="text-brown mb-2.5">Desporto</div>
@@ -196,7 +205,7 @@
             </div>
           </div>
           <div
-            class="bg-white flex flex-col justify-between w-[38%] flex-shrink-0"
+            class="bg-white flex flex-col justify-between md:w-[38%] lg:w-[50%] w-[100%] flex-shrink-0"
           >
             <div class="p-6">
               <div class="text-brown mb-2.5">Desporto</div>
@@ -214,7 +223,7 @@
             </div>
           </div>
           <div
-            class="bg-white flex flex-col justify-between w-[38%] flex-shrink-0"
+            class="bg-white flex flex-col justify-between md:w-[38%] lg:w-[50%] w-[100%] flex-shrink-0"
           >
             <div class="p-6">
               <div class="text-brown mb-2.5">Desporto</div>
@@ -246,17 +255,17 @@
         </div>
       </section>
       <section
-        class="px-32 pt-24 pb-32 flex gap-10 w-full border-b-4 border-b-stone-100"
+        class="2xl:px-52 md:px-32 px-6 md:pt-24 pt-14 md:pb-32 pb-20 flex md:flex-row flex-col gap-10 w-full border-b-4 border-b-stone-100"
       >
         <div
-          class="bg-contain bg-no-repeat bg-right text-brown text-5xl font-light leading-[3.4rem] w-[40%]"
+          class="bg-contain bg-no-repeat bg-right text-brown text-5xl font-light leading-[3.4rem] md:w-[40%] w-full"
           style="
             background-image: url('https://www.up.pt/portal/static/images/minerva_01.png');
           "
         >
           We are a University of Excellence!
         </div>
-        <div class="w-[60%] text-[1.2rem] font-light text-mdark">
+        <div class="md:w-[60%] w-full text-[1.2rem] font-light text-mdark">
           <p>
             With over 100 years of history, the University of Porto is a
             <b
@@ -277,10 +286,10 @@
           </a>
         </div>
       </section>
-      <section class="px-32 py-24">
+      <section class="2xl:px-52 md:px-32 px-6 md:py-24 pt-14">
         <h1 class="text-brown text-[3.2rem] font-light">Research</h1>
-        <div class="flex justify-between mt-5 pb-14 gap-10">
-          <div class="w-1/2">
+        <div class="lg:flex justify-between mt-5 pb-14 gap-10">
+          <div class="lg:w-1/2 w-full">
             <h1 class="font-bold text-[1.75rem] text-mdark">
               Research University
             </h1>
@@ -304,14 +313,17 @@
           </div>
           <img
             src="https://www.up.pt/portal/media/images/investigar-home_destaque.format-jpeg.jpg"
-            class="w-1/2"
+            class="lg:w-1/2 w-full lg:mt-0 mt-6"
           />
         </div>
       </section>
       <section
-        class="px-32 py-24 flex flex-col justify-center items-center text-white w-full bg-brown relative"
+        class="2xl:px-52 md:px-32 px-6 md:py-24 pt-14 pb-24 flex flex-col justify-center items-center text-white w-full bg-brown relative"
       >
-        <a href="" class="flex items-center absolute top-28 right-32">
+        <a
+          href=""
+          class="flex items-center absolute md:top-28 top-16 2xl:right-52 md:right-32 right-6"
+        >
           <span class="font-semibold text-base">Learn more</span>
           <img src="/images/wright_fill.svg" class="w-8 ml-1" />
         </a>
@@ -322,27 +334,29 @@
         >
           2022/2023
         </div>
-        <div class="flex justify-between w-[80%] pt-10">
+        <div
+          class="flex md:flex-row flex-col md:gap-0 gap-12 md:justify-between w-[80%] pt-10"
+        >
           <div>
             <h1 class="text-4xl font-extrabold text-center">+300</h1>
-            <div class="font-light text-3xl">Courses</div>
+            <div class="font-light text-3xl text-center">Courses</div>
           </div>
           <div>
             <h1 class="text-4xl font-extrabold text-center">+35.000</h1>
-            <div class="font-light text-3xl">Students enrolled</div>
+            <div class="font-light text-3xl text-center">Students enrolled</div>
           </div>
           <div>
             <h1 class="text-4xl font-extrabold text-center">48</h1>
-            <div class="font-light text-3xl">Research Units</div>
+            <div class="font-light text-3xl text-center">Research Units</div>
           </div>
         </div>
       </section>
-      <section class="px-32 py-24 bg-stone-50">
+      <section class="2xl:px-52 md:px-32 px-6 md:py-24 py-14 bg-stone-50">
         <h1 class="text-brown text-[3.2rem] font-light">
           Frequently asked questions
         </h1>
         <div
-          class="flex gap-10 w-full border-b border-b-stone-400 text-stone-400 font-bold text-lg mb-10 mt-4"
+          class="lg:flex hidden gap-10 w-full border-b border-b-stone-400 text-stone-400 font-bold text-lg mb-10 mt-4"
         >
           <a href="" class="faq_link py-2.5">International Students</a>
           <a href="" class="hover:faq_link py-2.5">Prospective Students</a>
@@ -350,8 +364,24 @@
           <a href="" class="hover:faq_link py-2.5">Alumni</a>
           <a href="" class="hover:faq_link py-2.5">U.Porto Students</a>
         </div>
-        <div class="flex justify-between mt-5 pb-14 gap-10">
-          <div class="w-1/2">
+        <select
+          name="course-type"
+          class="lg:hidden mt-4 border-2 border-black w-full p-3 pl-5 appearance-none bg-no-repeat text-lg focus:outline-none"
+          style="
+            background-image: url('/images/down_arrow.svg');
+            background-size: 10px 10px;
+            background-position: calc(100% - 20px);
+          "
+        >
+          <option value="International Students">International Students</option>
+          <option value="BM">Prospective Students</option>
+          <option value="M">Alumni</option>
+          <option value="D">U.Porto Students</option>
+        </select>
+        <div
+          class="flex lg:flex-row flex-col-reverse justify-between mt-5 pb-14 md:gap-10 gap-6"
+        >
+          <div class="lg:w-1/2 w-full">
             <h1 class="font-bold text-[1.75rem] text-mdark">
               International Students
             </h1>
@@ -379,22 +409,26 @@
           </div>
           <img
             src="https://www.up.pt/portal/media/images/gate-estudantes-internacionais.format-jpeg.jpg"
-            class="w-1/2"
+            class="lg:w-1/2 w-full"
           />
         </div>
       </section>
     </main>
     <footer
-      class="bg-no-repeat bg-zinc-800 px-32 pt-24 pb-10 text-white"
+      class="bg-no-repeat bg-zinc-800 2xl:px-52 md:px-32 px-6 md:pt-24 pt-20 pb-10 text-white"
       style="
         background-image: url(https://www.up.pt/portal/static/images/img_minerva_footer.png);
         background-size: 50%;
         background-position-x: -50%;
       "
     >
-      <div class="flex text-sm">
-        <div class="text-brown font-bold text-base w-[20%]">Media</div>
-        <div class="grid grid-cols-4 font-light gap-x-6 gap-y-4 w-[80%]">
+      <div class="md:flex text-sm">
+        <div class="text-brown font-bold text-base md:w-[20%] w-full">
+          Media
+        </div>
+        <div
+          class="grid md:grid-cols-4 grid-cols-1 font-light gap-x-6 md:gap-y-4 gap-y-2 md:w-[80%] w-full md:mt-0 mt-3"
+        >
           <div>
             <a href="" class="block">U.Porto News</a>
             <a href="" class="block mt-2.5">Brochures and Presentations</a>
@@ -405,12 +439,14 @@
         </div>
       </div>
       <div
-        class="flex mt-24 text-sm border-b-2 border-b-stone-400 border-opacity-50 pb-24"
+        class="md:flex md:mt-24 mt-16 text-sm border-b-2 border-b-stone-400 border-opacity-50 pb-24"
       >
-        <div class="text-brown font-bold text-base w-[20%]">
+        <div class="text-brown font-bold text-base md:w-[20%] w-full">
           U.Porto Portals
         </div>
-        <div class="grid grid-cols-4 font-light gap-x-6 gap-y-4 w-[80%]">
+        <div
+          class="grid md:grid-cols-4 grid-cols-1 font-light gap-x-6 md:gap-y-4 gap-y-2 md:w-[80%] w-full md:mt-0 mt-3"
+        >
           <a href="">CDUP - U.Porto Sports Centre</a>
           <a href=""
             >Social Support Services of the University of Porto (SASUP)</a
@@ -429,7 +465,7 @@
           <a href="">SIGARRA U.Porto</a>
         </div>
       </div>
-      <div class="pt-14 flex justify-between items-start">
+      <div class="pt-14 md:flex justify-between items-start">
         <div class="flex gap-9 items-center">
           <a href="">
             <img src="/images/newspaper.svg" class="w-6" />
@@ -450,16 +486,16 @@
             <img src="/images/facebook.svg" class="w-3.5" />
           </a>
         </div>
-        <div>
+        <div class="md:mt-0 mt-10">
           <div class="font-bold">Contacts</div>
-          <div class="font-bold text-[0.9rem] mt-4">
+          <div class="font-bold text-sm mt-4">
             Reitoria da Universidade do Porto
           </div>
-          <div class="font-light my-3 text-[0.9rem]">
+          <div class="font-light my-3 text-sm">
             <div>Praça Gomes Teixeira</div>
             <div>4099-002 Porto, Portugal</div>
           </div>
-          <div class="font-light text-[0.9rem]">
+          <div class="font-light text-sm">
             <div>
               <b>Tel.:</b><a href="tel:+351220408000"> (+351) 220 408 000</a>
             </div>
@@ -467,7 +503,9 @@
           </div>
         </div>
       </div>
-      <div class="flex gap-6 font-light text-[0.9rem]">
+      <div
+        class="flex mf:flex-row flex-col md:gap-6 gap-2 font-light text-sm md:mt-0 mt-10"
+      >
         <div class="font-medium">© University of Porto 2024</div>
         <a href="">Personal Data Protection </a>
         <a href="">Privacy Policy</a>
