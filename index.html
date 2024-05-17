@@ -18,7 +18,7 @@
       }
     </style>
   </head>
-  <body class="overflow-hidden">
+  <body class="overflow-x-hidden">
     <header>
       <div class="flex bg-dark justify-between text-white w-full px-32">
         <div class="flex items-center gap-4">
@@ -85,5 +85,30 @@
         </div>
       </nav>
     </header>
+    <main>
+      <section
+        class="bg-pros min-h-[100vh] w-full relative flex flex-col justify-end px-32 pb-20"
+        style="background-image: url('/images/hero1.jpeg')"
+      >
+        <div class="bg-zinc-800 bg-opacity-80 p-5 pr-8 w-[48%]">
+          <h1 class="text-white text-2xl font-bold">
+            We're in the world's top 200 in 13 areas of study!
+          </h1>
+          <p class="text-gray-300 pt-4 pb-6">
+            U.Porto stands out in 28 areas of study in the "QS World University
+            Rankings by Subject" 2024, being the best in Portugal in 16 of them.
+          </p>
+          <a class="bg-brown px-2.5 text-base font-bold py-0.5">See More</a>
+        </div>
+        <div class="absolute bg-brown pl-2 p-2.5 left-0 top-1/2 cursor-pointer">
+          <img src="/images/left.svg" class="w-5" />
+        </div>
+        <div
+          class="absolute bg-brown pl-2 p-2.5 right-0 top-1/2 cursor-pointer rotate-180"
+        >
+          <img src="/images/left.svg" class="w-5" />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
