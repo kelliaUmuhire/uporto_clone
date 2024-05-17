@@ -9,4 +9,13 @@
   .faq_link {
     @apply text-mdark border-b border-b-mdark;
   }
+  /* .fixed_navbar {
+    @apply fixed top-0 z-20;
+  } */
+}
+
+.fixed_navbar {
+  position: fixed;
+  top: 0;
+  z-index: 20;
 }
