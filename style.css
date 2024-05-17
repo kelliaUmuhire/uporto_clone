@@ -6,4 +6,7 @@
   .bg-pros {
     @apply bg-cover bg-center bg-no-repeat;
   }
+  .faq_link {
+    @apply text-mdark border-b border-b-mdark;
+  }
 }
