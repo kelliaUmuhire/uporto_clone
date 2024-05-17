@@ -1,9 +1,13 @@
 let nav = document.querySelector("nav");
 let sticky = nav.offsetTop;
 
-const toggleMenu = () => {
-  document.getElementById("menuLinks").classList.toggle("hidden");
-  document.getElementById("menuLinks").classList.toggle("flex");
+const toggleMenu = (menu) => {
+  if (menu === 1) {
+    document.getElementById("menuLinks").classList.toggle("hidden");
+  } else {
+    document.getElementById("moreLinks").classList.toggle("hidden");
+    document.getElementById("moreLinks").classList.toggle("flex");
+  }
 };
 
 const checkPosition = () => {

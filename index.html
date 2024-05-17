@@ -22,7 +22,7 @@
   <body class="overflow-x-hidden relative">
     <header>
       <div
-        class="flex md:flex-row flex-col md:py-0 py-4 bg-mdark justify-between text-white w-full 2xl:px-52 md:px-32 px-10"
+        class="lg:flex hidden bg-mdark justify-between text-white w-full 2xl:px-52 lg:px-32"
       >
         <div class="flex items-center gap-4">
           <div class="flex w-fit items-center">
@@ -72,12 +72,109 @@
         </div>
       </div>
       <nav
-        class="bg-stone-200 2xl:px-52 md:px-32 px-10 py-8 flex lg:flex-nowrap flex-wrap lg:gap-6 justify-between items-center w-full text-[1.1rem] font-extrabold"
+        class="bg-stone-200 2xl:px-52 md:px-32 px-6 md:py-8 py-4 flex lg:flex-nowrap flex-wrap lg:gap-6 justify-between items-center w-full text-[1.1rem] font-extrabold"
       >
-        <img src="/images/logo1.svg" class="lg:w-[35%] w-[75%]" />
-        <div class="lg:hidden" onclick="toggleMenu()">Menu</div>
+        <img src="/images/logo1.svg" class="lg:w-[35%] lg:block hidden" />
+        <div class="flex items-center">
+          <img
+            class="lg:hidden w-8"
+            onclick="toggleMenu(1)"
+            src="/images/menu.svg"
+          />
+          <img src="/images/logo2.svg" class="lg:hidden w-[45%] ml-3" />
+        </div>
+        <img
+          class="lg:hidden w-8"
+          onclick="toggleMenu(2)"
+          src="/images/menu1.svg"
+        />
         <div
           id="menuLinks"
+          class="lg:hidden hidden fixed bg-black bg-opacity-20 w-full left-0 top-0 h-[100vh] z-20"
+        >
+          <div class="w-[75%] bg-white h-full relative">
+            <div class="flex justify-between p-6 bg-stone-100">
+              <img src="/images/logo2.svg" class="w-[30%]" />
+              <img
+                src="/images/close.svg"
+                class="w-7"
+                onclick="toggleMenu(1)"
+              />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>STUDY</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>RESEARCH</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>INNOVATE</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>LIVE</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>EXPLORE</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div class="w-[85%] mx-6 mt-3 relative">
+              <input
+                type="text"
+                class="w-full border border-zinc-300 py-2 pl-4 pr-10 font-normal"
+                placeholder="Search"
+              />
+              <img
+                src="/images/search.svg"
+                class="w-6 absolute right-3 top-[25%]"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          id="moreLinks"
+          class="lg:hidden fixed bg-black bg-opacity-20 w-full right-0 top-0 h-[100vh] z-20 hidden justify-end"
+        >
+          <div class="w-[75%] bg-white h-full relative">
+            <div class="flex justify-between p-6 bg-stone-100">
+              <img
+                src="/images/close.svg"
+                class="w-7"
+                onclick="toggleMenu(2)"
+              />
+              <ul class="text-sm font-semibold">
+                <li class="text-gray-500 inline">PT</li>
+                <li class="inline ml-2">EN</li>
+              </ul>
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>ABOUT THE UNIVERSITY</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+            <div
+              class="flex justify-between py-4 px-6 border-b border-b-stone-400 text-sm font-normal"
+            >
+              <div>FACULITIES</div>
+              <img src="/images/black_right.svg" class="w-7" />
+            </div>
+          </div>
+        </div>
+        <div
           class="lg:flex hidden lg:flex-row flex-col lg:w-auto w-full lg:pl-4 lg:mt-0 mt-6 lg:gap-8 gap-2"
         >
           <a href="">STUDY</a>
@@ -315,12 +412,12 @@
       >
         <a
           href=""
-          class="flex items-center absolute md:top-28 top-16 2xl:right-52 md:right-32 right-6"
+          class="flex items-center absolute md:top-24 top-16 2xl:right-52 md:right-32 right-6"
         >
           <span class="font-semibold text-base">Learn more</span>
           <img src="/images/wright_fill.svg" class="w-8 ml-1" />
         </a>
-        <img src="/images/bullhorn.svg" class="w-24 -rotate-[25deg]" />
+        <img src="/images/bullhorn.svg" class="w-28" />
         <h1 class="text-4xl font-bold mt-10 mb-1">U.PORTO IN FIGURES</h1>
         <div
           class="font-light text-3xl border-b border-b-white pb-10 w-full text-center"
